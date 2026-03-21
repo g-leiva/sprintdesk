@@ -6,7 +6,7 @@ class Task < ApplicationRecord
 
   validates :title, presence: true, length: { minimum: 2, maximum: 255 }
   validates :position, numericality: { only_integer: true, greater_than: 0, allow_nil: true }
-  validates :position, uniqueness: { scope: column_id }, allow_nil: true
+  validates :position, uniqueness: { scope: :column_id }, allow_nil: true
 
   scope :ordered,      -> { order(position: :asc) }
   scope :unassigned,   -> { where(assignee_id: nil) }
