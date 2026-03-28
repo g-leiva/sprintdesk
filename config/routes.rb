@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  get "dashboard/index"
+  get "users/new"
+  get "users/create"
+  # User Authentication
+  get "/login", to: "sessions#new", as: :login
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy", as: :logout
+
+  # User registration
+  get "/signup", to: "users#new", as: :signup
+  post "/signup", to: "users#create"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -11,4 +22,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+
+  # Dashboard
+  root "dashboard#index"
 end

@@ -1,0 +1,33 @@
+<div>
+    <h1>Crea tu cuenta</h1>
+
+    <% if flash[:alert] %>
+        <p><%= flash[:alert] %></p>
+    <% end %>
+
+    <%= form_with model: @user, url: signup_path do |f| %>
+        <div>
+            <%= f.label :name, "Nombre completo" %>
+            <%= f.text_field :name, required: true, autofocus: true %>
+        </div>
+
+        <div>
+            <%= f.label :email, "Email" %>
+            <%= f.email_field :email, required: true %>
+        </div>
+
+        <div>
+            <%= f.label :password, "Contraseña" %>
+            <%= f.password_field :password, required: true %>
+        </div>
+
+        <div>
+            <%= f.label :password_confirmation, "Confirmar contraseña" %>
+            <%= f.password_field :password_confirmation, required: true %>
+        </div>
+
+        <%= f.submit "Crear mi cuenta" %>
+    <% end %>
+
+    <p>Ya tienes una cuenta? <%= link_to "Iniciar sesión", login_path %></p>
+</div>

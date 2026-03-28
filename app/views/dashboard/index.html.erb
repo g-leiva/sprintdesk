@@ -1,0 +1,22 @@
+<div>
+    <h1>Bienvenido, <%= current_user.name%>!</h1>
+
+    <% if flash[:notice] %>
+        <p><%= flash[:notice]%></p>
+    <% end %>
+
+    <%= link_to "Cerrar sesión", logout_path, data: { turbo_method: :delete } %>
+
+    <h2> Tus equipos </h2>
+
+    <% if @teams.any? %>
+        <% @teams.each do |team| %>
+            <div>
+                <h3> team.name </h3>
+                <p> team.description </p>
+            </div>
+        <% end %>
+    <% else %>
+        <p> No perteneces a ningún equipo </p>
+    <% end %>
+</div>
