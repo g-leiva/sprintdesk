@@ -12,9 +12,9 @@ class UsersController < ApplicationController
       session[:user_id] = result[:user].id
       redirect_to root_path, notice: "Bienvenido, #{result[:user].name}!"
     else
-      @user = User.new(user_prams.except(:password, :password_confirmation))
+      @user = User.new(user_params.except(:password, :password_confirmation))
       flash.now[:alert] = result[:errors].join(", ")
-      render :new, status: unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 

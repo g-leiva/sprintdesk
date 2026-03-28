@@ -1,11 +1,11 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  user: one
-  team: one
-  role: MyString
+gerber_frontend:
+  user: gerber
+  team: frontend
+  role: owner
 
-two:
-  user: two
-  team: two
-  role: MyString
+maria_backend:
+  user: maria
+  team: backend
+  role: member

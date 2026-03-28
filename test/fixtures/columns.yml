@@ -1,11 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
+todo:
+  name: To Do
   position: 1
-  sprint: one
+  sprint: sprint_uno
 
-two:
-  name: MyString
-  position: 1
-  sprint: two
+in_progress:
+  name: In Progress
+  position: 2
+  sprint: sprint_uno
+
+done:
+  name: Done
+  position: 3
+  sprint: sprint_uno

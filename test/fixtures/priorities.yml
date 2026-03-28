@@ -1,11 +1,16 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  color: MyString
+baja:
+  name: Baja
+  color: "#00FF00"
   level: 1
 
-two:
-  name: MyString
-  color: MyString
+media:
+  name: Media
+  color: "#FFA500"
   level: 2
+
+alta:
+  name: Alta
+  color: "#FF0000"
+  level: 3

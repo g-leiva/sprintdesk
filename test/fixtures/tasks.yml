@@ -1,21 +1,21 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  description: MyText
+tarea_uno:
+  title: Configurar base de datos
+  description: Configurar PostgreSQL
   position: 1
-  due_date: 2026-03-19
-  column: one
-  priority: one
-  assignee_id: 1
-  creator_id: 1
+  due_date: <%= Date.today + 7 %>
+  column: todo
+  priority: alta
+  assignee: gerber
+  creator: gerber
 
-two:
-  title: MyString
-  description: MyText
-  position: 1
-  due_date: 2026-03-19
-  column: two
-  priority: two
-  assignee_id: 1
-  creator_id: 1
+tarea_dos:
+  title: Construir modelos
+  description: Crear modelos de rails
+  position: 2
+  due_date: <%= Date.today + 10 %>
+  column: in_progress
+  priority: media
+  assignee: maria
+  creator: gerber
